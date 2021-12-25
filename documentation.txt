@@ -1,0 +1,48 @@
+--GoTranind  Project description 
+This project is home assignment for Edgegaming company 
+It’s an FPS training game to improve accuracy and mouse control.
+The level is designed like a shooting range, on each round 5 targets will appear from left to right in a slightly different place to make the aiming more challenging.
+When you shoot each target you will see a small number above the target, the number represents the score from 1 to 10 
+After each round your total score will be calculated. 
+
+--Technology
+This game is made with Unity 3d version 2020.3.25f1
+For windows platform only
+
+--Source code
+https://github.com/kosta080/goTraning
+*The compiled game is attached to the mail, if you have any problem running it please don't hesitate to contact me .
+*Unity gitignore was used - https://github.com/github/gitignore/blob/main/Unity.gitignore
+
+--Assets used
+I have used “YuME Free” from unity asset store for the environment
+https://assetstore.unity.com/packages/tools/level-design/yume-free-77387
+And a gun free gun model from here
+https://free3d.com/3d-model/45-acp-smith-and-wesson-13999.html
+
+--Sound
+The gunshot sound is taken from a free sound resource  
+In addition there is a sound of bullet hitting the target to indicate the hit 
+And a sound effect for pressing the reset button
+
+--Scripts description
+All the scripts were written by me except those that was imported with “YuME” .
+
+--Training process description
+There are two training modes that the player can choose from (by pressing the buttons in the scene)
+Five steel targets that appear one by one.
+And one moving targets that you have to hit 5 times
+After each round you will see your score and you will have the option to restart the round by pressing the restart button 
+
+--More ideas for future improvement of the game
+As a future improvement ideas i want to implement the following features.
+*Give the player the option to modify mouse sensitivity.
+*Give the player the option to modify the field of view.
+*Tweak Target count Target size and the speed of the moving Target.
+*More training modes like round arena with targets appearing all around the player.
+*Implement a training routine where the player has to move and shoot at the same time. To take advantage of the ability of the player to move.
+
+
+<<Thank you for checking out my work>>
+
+
