@@ -30,6 +30,10 @@ public class appearing_targets : MonoBehaviour
     {
         StartCoroutine(CountDown());
     }
+    private void StopCountDown()
+    {
+        StopCoroutine(CountDown());
+    }
 
     IEnumerator CountDown()
     {
@@ -41,6 +45,7 @@ public class appearing_targets : MonoBehaviour
         }
         Debug.Log("shoot");
         roundActive = true;
+        targetsOnScene = 0;
         devlareTarget();
     }
     private void devlareTarget()
@@ -93,6 +98,7 @@ public class appearing_targets : MonoBehaviour
     }
     public void stopRound()
     {
+        StopCountDown();
         roundActive = false;
         for (var i = 0; i < Targets.Count; i++)
         {
