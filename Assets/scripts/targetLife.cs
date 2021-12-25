@@ -34,7 +34,10 @@ public class targetLife : MonoBehaviour
     }
     private void disable()
     {
-        state = "disabled";
-        transform.GetComponent<Renderer>().material.SetColor("_Color", Color.gray);
+        if(state != "beaten")
+        {
+            state = "disabled";
+            transform.GetComponent<Renderer>().material.SetColor("_Color", Color.gray);
+        }
     }
 }

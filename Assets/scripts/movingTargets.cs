@@ -14,6 +14,7 @@ public class movingTargets : MonoBehaviour
     {
         EventManager.ResetMovingTar += restartRound;
         EventManager.PouseGame += stopRound;
+        EventManager.Reset5Tar += stopRound;
     }
 
     private void restartRound()
@@ -22,6 +23,12 @@ public class movingTargets : MonoBehaviour
         beginCountDown();
     }
     private void stopRound()
+    {
+        targetsAnimator.SetTrigger("stop");
+        targetsOnScene = 0;
+        readyText.text = "";
+    }
+    private void hideRound()
     {
         targetsAnimator.SetTrigger("stop");
         targetsOnScene = 0;

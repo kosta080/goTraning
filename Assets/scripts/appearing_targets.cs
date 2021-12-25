@@ -12,21 +12,19 @@ public class appearing_targets : MonoBehaviour
     public float targetLifespen = 3f;
     public TextMesh readyText;
     private int roundScore;
-
     public List<GameObject> Targets;
-
     Vector3 targetPlace;
-
     private int targetsOnScene = 0;
+
+    private bool roundActive = false;
 
     void Start()
     {
         //StartCoroutine(CountDown());
         //EventManager.StartTraining += beginCountDown;
         EventManager.Reset5Tar += restartRound;
-        EventManager.PouseGame += stopRound;
-
         EventManager.ResetMovingTar += stopRound;
+        EventManager.PouseGame += stopRound;
     }
     private void beginCountDown()
     {
@@ -42,10 +40,12 @@ public class appearing_targets : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
         Debug.Log("shoot");
+        roundActive = true;
         devlareTarget();
     }
     private void devlareTarget()
     {
+        if (!roundActive) return;
         dropTarget(targetsOnScene, targetCount);
         if (targetsOnScene < targetCount-1)
         {
@@ -93,6 +93,7 @@ public class appearing_targets : MonoBehaviour
     }
     public void stopRound()
     {
+        roundActive = false;
         for (var i = 0; i < Targets.Count; i++)
         {
             Destroy(Targets[i]);
